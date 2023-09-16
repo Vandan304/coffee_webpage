@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemon&family=Nunito:wght@200;300;600;700&family=Ubuntu&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+.logo img
+{
+    height: 4rem;
+}
+.navbar
+{
+
+    display: flex;
+    width: 90%;
+    height: 12vh;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.navlist
+{
+    display: flex;
+    gap: 2.5rem;
+}
+.navlist li
+{
+    list-style: none;
+}
+.navlist a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 0.08rem;
+}
+.hero{
+    display: flex;
+}
+.hero .left
+{
+    background-color: #2c1e1e;
+    justify-content: center;
+    padding: 3rem;
+}
+.hero .right
+{
+    background-color: #7c573c;
+    justify-content: center;
+}
+.hero .hero_split
+{
+    width: 50%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.navlist .slider
+{
+    background-color: rgba(255, 255, 255, .345);
+    height: 5rem;
+    width: 6rem;
+    position: absolute;
+    border-top: 0.3rem solid #2c1e1e;
+    border-radius: 0 0 2rem 2rem;
+    top: 0;
+    right: 430px;
+    backdrop-filter: blur(.5rem);
+    z-index: -1;
+    transition: 1s ease-in-out;
+    
+}
+
+.navlist li:nth-child(2):hover ~ .slider
+{
+    right: 335px;
+}
+.navlist li:nth-child(3):hover ~ .slider
+{
+    right: 225px;
+}
+.navlist li:nth-child(4):hover ~ .slider
+{
+    right: 105px;
+}
+.navlist li:nth-child(5):hover ~ .slider
+{
+    right: -10px;
+}
+.left .content
+{
+    color: white;
+}
+.content h1
+{
+    font-size: 5rem;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.04rem white;
+    font-family: 'Lemon', cursive;
+    letter-spacing: 0.2rem;
+}
+.content p
+{
+    color: rgba(255, 255, 255, .37);
+    font-size: 1.3rem;
+    width: 75%;
+    margin: 1.5rem 0;
+    line-height: 2rem;
+}
+.content button
+{
+    background: radial-gradient(at top left,#5a4740,#2c1e1e);
+    padding: 1rem 3rem;
+    border: .2rem solid rgba(255, 255, 255, .286);
+    font-size: 1.3rem;
+    color: white;
+    border-radius: 4rem;
+    letter-spacing: 0.1rem;
+}
+.content button:hover
+{
+    background: radial-gradient(at bottom right,#5a4740,#2c1e1e);
+}
+.right img
+{
+    height: 68%;
+    padding-left:  3rem;
+}
+.middle
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.middle .circle
+{
+    height: 9rem;
+    width: 9rem;
+    background-color: white;
+    border-radius: 8rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.middle .circle:nth-child(2)
+{
+    background-image: url(coffee\ beans.jpg);
+    margin:2rem 0;
+    background-size: 180%;
+}
+.middle .circle:nth-child(1)
+{
+    background-image: url(coffee\ powder.jpg);
+    background-size: 350%;
+
+}
+.middle .circle:nth-child(3)
+{
+    background-image: url(leaves.jpg);
+    background-size: 350%;
+    
+}
+.middle .circle::before
+{
+    content: "";
+    background-color:transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 8rem;
+    border: 0.25rem dashed white;
+    top: 50%;
+    left: 50%;
+    padding: 0.1rem;
+    transform: translate(-50%,-50%);
+}
